@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: go-pmjccocm 
+  janus-idp.io/tekton: go-pmjccocm
+  backstage.io/kubernetes-id: go-pmjccocm
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-pmjccocm
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
